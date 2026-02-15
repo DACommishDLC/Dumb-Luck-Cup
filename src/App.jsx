@@ -310,7 +310,7 @@ export default function DumbLuckCup() {
         <div className="header">
           <div style={{ fontSize: 36, marginBottom: 4 }}>🏆</div>
           <div className="header-title">DUMB LUCK CUP</div>
-          <div style={{ fontSize: 11, color: var(--text-3), marginTop: 2 }}>Really, all you need is dumb luck</div>
+          <div style={{ fontSize: 11, color: '#888', marginTop: 2 }}>Really, all you need is dumb luck</div>
         </div>
 
         {tab === "picks" && (
@@ -318,12 +318,12 @@ export default function DumbLuckCup() {
             <div className="sec-head">
               <div className="sec-title">{currentWeek?.label || "No Active Week"}</div>
             </div>
-            {!currentWeek && <div style={{ padding: 40, textAlign: "center", color: var(--text-3) }}>No games yet</div>}
+            {!currentWeek && <div style={{ padding: 40, textAlign: "center", color: '#888' }}>No games yet</div>}
             {currentWeek?.games.map(game => {
               const userPick = picks[user.username]?.[currentWeek.id]?.[game.id];
               return (
                 <div key={game.id} className="game-card">
-                  <div style={{ fontSize: 10, color: var(--text-3), marginBottom: 8 }}>
+                  <div style={{ fontSize: 10, color: '#888', marginBottom: 8 }}>
                     Yahoo Sports Spread: {game.spreadFavor === "home" ? game.home : game.away} -{game.spread}
                   </div>
                   <div className="matchup">
@@ -365,7 +365,7 @@ export default function DumbLuckCup() {
                 {loading ? "Loading..." : "Auto-Load NFL Week 12 + NCAA Games"}
               </button>
             )}
-            <div style={{ marginTop: 20, fontSize: 12, color: var(--text-3) }}>
+            <div style={{ marginTop: 20, fontSize: 12, color: '#888' }}>
               Current weeks: {weeks.length}
             </div>
           </div>
