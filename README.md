@@ -54,3 +54,4 @@
 ## Note
 
 Currently uses in-memory storage (resets on refresh). To add persistence, you'll need to set up a database like Supabase or Firebase (I can help with that later).
+commit
